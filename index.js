@@ -1,29 +1,41 @@
-var express = require('express');
-var { graphqlHTTP } = require('express-graphql');
-var { buildSchema } = require('graphql');
+const express = require('express');
+const mongoose = require('mongoose');
+const TypeDefs = require('./schema');
+const Resolvers = require('./resolvers');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const { ApolloServer } = require('apollo-server-express');
 
-// GraphQL schema
-var schema = buildSchema(
-    `type Query {
-                            hello: String
-                            greetings(name: String): String
-                   }`);
+//Store sensetive information to env variables
+const dotenv = require('dotenv');
+dotenv.config();
 
-// Root resolver
-var root = {
-    hello: () => 'Hello World!',
-    greetings: (args) => {
-        return `Hello, ${args.name}`
-    },
-};
+//mongoDB Atlas Connection String
+const url = process.env.MONGODB_URL;
 
-// An express server and a GraphQL endpoint
-var app = express();
-app.use('/graphql', graphqlHTTP({
-    schema: schema,        //Set schema
-    rootValue: root, //Set resolver
-    graphiql: true             //Client access
-}));
+//Connect to mongoDB Atlas
+const connect = mongoose.connect(url, 
+{ 
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+});
 
-// Start Server to listen
-app.listen(4000, () => console.log('Express GraphQL Server Now Running On http://localhost:4000/graphql'));
+connect.then((db) => {
+      console.log('Connected correctly to server!');
+}, (err) => {
+      console.log(err);
+});
+
+//Define Apollo Server
+const server = new ApolloServer({
+      typeDefs: TypeDefs.typeDefs,
+      resolvers: Resolvers.resolvers
+});
+
+//Define Express Server
+const app = express();
+app.use(bodyParser.json());
+app.use('*', cors());
+server.applyMiddleware({ app });
+app.listen({ port: process.env.PORT }, () =>
+  console.log(`🚀 Server ready at http://localhost:${process.env.PORT}${server.graphqlPath}`));
