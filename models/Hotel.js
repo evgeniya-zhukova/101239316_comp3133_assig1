@@ -4,6 +4,7 @@ const HotelSchema = new mongoose.Schema({
   hotel_id: {
     type: Number,
     default: 0,
+    unique: [true, "Duplicate hotel_id Not allowed"],
     validate(value) {
       if (value < 0){
         throw new Error("Negative hotel_id aren't real.");
@@ -55,6 +56,7 @@ const HotelSchema = new mongoose.Schema({
   user_id: {
     type: Number,
     default: 0,
+    unique: [true, "Duplicate user_id Not allowed"],
     validate(value) {
       if (value < 0){
         throw new Error("Negative user_id aren't real.");

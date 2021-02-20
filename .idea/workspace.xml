@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16b35749-83e9-4a50-8bbc-290b28fdc5e4" name="Default Changelist" comment="">
+    <list default="true" id="16b35749-83e9-4a50-8bbc-290b28fdc5e4" name="Default Changelist" comment="Update Hotel Schema">
       <change afterPath="$PROJECT_DIR$/screen_graphiql/1.1_PM_Select.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/screen_graphiql/1_Select.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/screen_graphiql/2.1_PM_Select.png" afterDir="false" />
@@ -13,10 +13,7 @@
       <change afterPath="$PROJECT_DIR$/screen_graphiql/5.1_PM_Delete.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/screen_graphiql/5_Delete.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sample_Hotel_Records.json" beforeDir="false" afterPath="$PROJECT_DIR$/Sample_Hotel_Records.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Hotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Hotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/schema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613795300768</updated>
-      <workItem from="1613795301947" duration="7236000" />
+      <workItem from="1613795301947" duration="8427000" />
     </task>
     <task id="LOCAL-00001" summary="Create node modules">
       <created>1613795901924</created>
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613856184034</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update Hotel Schema">
+      <created>1613857829928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613857829928</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,13 +115,14 @@
     <MESSAGE value="Create node modules" />
     <MESSAGE value="Create index.js" />
     <MESSAGE value="Create Hotel Schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Hotel Schema" />
+    <MESSAGE value="Update Hotel Schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Hotel Schema" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="0" key="CommitChangelistDialog2" timestamp="1613856183120">
+    <state x="326" y="0" key="CommitChangelistDialog2" timestamp="1613857828301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="326" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613856183120" />
+    <state x="326" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613857828301" />
     <state x="147" y="52" key="DiffContextDialog" timestamp="1613856140382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -134,9 +139,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613856040861" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613856194932">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613857832318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613856194932" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613857832318" />
   </component>
 </project>
