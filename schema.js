@@ -3,13 +3,14 @@ const { gql } = require('apollo-server-express');
 exports.typeDefs = gql `
    type Hotel {
      id: ID!
-     firstname: String!
-     lastname: String!
-     email: String!
-     gender: String!
+     hotel_id: Int!
+     hotel_name: String!
+     street: String!
      city: String!
-     designation: String!
-     salary: Float!
+     postal_code: String!
+     price: Float!
+     email: String!
+     user_id: Int!
    }
 
    type Query {
@@ -19,22 +20,24 @@ exports.typeDefs = gql `
    }
 
    type Mutation {
-     addHotel(firstname: String!
-        lastname: String!
-        email: String!
-        gender: String!
+     addHotel(hotel_id: Int!
+        hotel_name: String!
+        street: String!
         city: String!
-        designation: String!
-        salary: Float!): Hotel
+        postal_code: String!
+        price: Float!
+        email: String!
+        user_id: Int!): Hotel
 
      updateHotel(id: String!,
-        firstname: String!
-        lastname: String!
-        email: String!
-        gender: String!
+        hotel_id: Int!
+        hotel_name: String!
+        street: String!
         city: String!
-        designation: String!
-        salary: Float!): Hotel
+        postal_code: String!
+        price: Float!
+        email: String!
+        user_id: Int!): Hotel
 
      deleteHotel(id: ID!): Hotel
    }

@@ -23,14 +23,15 @@ exports.resolvers = {
             }
 
             let newHotel = new Hotel({
-                firstname: args.firstname,
-                lastname: args.lastname,
-                email: args.email,
-                gender: args.gender,
+                hotel_id: args.hotel_id,
+                hotel_name: args.hotel_name,
+                street: args.street,
                 city: args.city,
-                designation: args.designation,
-                salary: args.salary,
-            });
+                postal_code: args.postal_code,
+                price: args.price,
+                email: args.email,
+                user_id: args.user_id,
+        });
         return await newHotel.save();
       },
       updateHotel: async (parent, args) => {
@@ -44,13 +45,14 @@ exports.resolvers = {
             },
             {
                 $set: {
-                    firstname: args.firstname,
-                    lastname: args.lastname,
-                    email: args.email,
-                    gender: args.gender,
+                    hotel_id: args.hotel_id,
+                    hotel_name: args.hotel_name,
+                    street: args.street,
                     city: args.city,
-                    designation: args.designation,
-                    salary: args.salary
+                    postal_code: args.postal_code,
+                    price: args.price,
+                    email: args.email,
+                    user_id: args.user_id
                 }
             }, {new: true}, (err, hotel) => {
                 if (err)

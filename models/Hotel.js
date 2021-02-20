@@ -1,18 +1,43 @@
 const mongoose = require('mongoose');
 
 const HotelSchema = new mongoose.Schema({
-  firstname: {
-    type: String,
-    required: [true, 'Please enter first name'],
-    trim: true,
-    lowercase: true
+  hotel_id: {
+    type: Number,
+    default: 0,
+    validate(value) {
+      if (value < 0){
+        throw new Error("Negative hotel_id aren't real.");
+      }
+    }
   },
-  lastname: {
+  hotel_name: {
     type: String,
-    alias: 'surname',
     required: true,
-    trim: true,
-    lowercase: true
+    trim: true
+  },
+  street: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  city: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  postal_code: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  price: {
+    type: Number,
+    default: 0.0,
+    validate(value) {
+      if (value < 0.0){
+        throw new Error("Negative price aren't real.");
+      }
+    }
   },
   email: {
     type: String,
@@ -21,48 +46,20 @@ const HotelSchema = new mongoose.Schema({
     unique: [true, "Duplicate Email Not allowed"],
     trim: true,
     uppercase: true,
-    //minlength:10,
-    //maxlength: 50,
     //Custom validation
     validate: function(value) {
       var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       return emailRegex.test(value);
     }
   },
-  gender: {
-    type: String,
-    required: true,
-    enum: ['male', 'female', 'other'],
-    trim: true,
-    lowercase: true
-  },
-  city:{
-    type: String,
-    required: true,
-    trim: true,
-    lowercase: true
-  },
-  designation: {
-    type: String,
-    required: true,
-    trim: true,
-    lowercase: true
-  },
-  salary: {
+  user_id: {
     type: Number,
-    default: 0.0,
-    //min: [1000, 'Too less Salary'],
-    //max: 12000,
+    default: 0,
     validate(value) {
-      if (value < 0.0){
-         throw new Error("Negative Salary aren't real.");
+      if (value < 0){
+        throw new Error("Negative user_id aren't real.");
       }
     }
-  },
-  created: {
-    type: Date,
-    default: Date.now,
-    alias: 'createdAt'
   },
 });
 
