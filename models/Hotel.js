@@ -46,8 +46,8 @@ const HotelSchema = new mongoose.Schema({
     //index: true, //Optional if unique is defined
     unique: [true, "Duplicate Email Not allowed"],
     trim: true,
-    uppercase: true,
-    //Custom validation
+    lowercase: true,
+    //Custom validation/
     validate: function(value) {
       var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       return emailRegex.test(value);
