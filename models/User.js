@@ -4,6 +4,7 @@ const UserSchema = new mongoose.Schema({
     user_id: {
         type: Number,
         default: 0,
+        required: true,
         unique: [true, "Duplicate user_id Not allowed"],
         validate(value) {
             if (value < 0){
@@ -14,6 +15,7 @@ const UserSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
+        unique: [true, "Duplicate username Not allowed"],
         trim: true
     },
     password: {

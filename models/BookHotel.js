@@ -4,6 +4,7 @@ const BookHotelSchema = new mongoose.Schema({
     hotel_id: {
         type: Number,
         default: 0,
+        required: true,
         validate(value) {
             if (value < 0){
                 throw new Error("Negative hotel_id aren't real.");
@@ -28,6 +29,7 @@ const BookHotelSchema = new mongoose.Schema({
     user_id: {
         type: Number,
         default: 0,
+        required: true,
         validate(value) {
             if (value < 0){
                 throw new Error("Negative user_id aren't real.");
