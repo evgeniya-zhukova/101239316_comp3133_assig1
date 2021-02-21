@@ -14,8 +14,8 @@ dotenv.config();
 const url = process.env.MONGODB_URL;
 
 //Connect to mongoDB Atlas
-const connect = mongoose.connect(url, 
-{ 
+const connect = mongoose.connect(url,
+{
       useNewUrlParser: true,
       useUnifiedTopology: true
 });

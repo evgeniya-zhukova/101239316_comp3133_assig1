@@ -6,9 +6,9 @@ exports.typeDefs = gql `
    type BookHotel {
      id: ID!
      hotel_id: Int!
-     booking_date: Date!
-     booking_start: Date!
-     booking_end: Date!
+     booking_date: String!
+     booking_start: String!
+     booking_end: String!
      user_id: Int!
    }
 
@@ -45,19 +45,16 @@ exports.typeDefs = gql `
 
    type Mutation {
       addBookHotel(hotel_id: Int!
-        booking_date: Date!
-        booking_start: Date!
-        booking_end: Date!
+        booking_date: String!
+        booking_start: String!
+        booking_end: String!
         user_id: Int!): BookHotel
 
      updateBookHotel(id: String!,
         hotel_id: Int!
-        hotel_name: String!
-        street: String!
-        city: String!
-        postal_code: String!
-        price: Float!
-        email: String!
+        booking_date: String!
+        booking_start: String!
+        booking_end: String!
         user_id: Int!): BookHotel
 
      deleteBookHotel(id: ID!): BookHotel
