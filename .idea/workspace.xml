@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16b35749-83e9-4a50-8bbc-290b28fdc5e4" name="Default Changelist" comment="Update Schema">
-      <change afterPath="$PROJECT_DIR$/screen_graphiql/4.1_PM_Update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screen_graphiql/4_Update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screen_graphiql/5.1_PM_Delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screen_graphiql/5_Delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screen_graphiql/2.3_MongoDB_Select_All_Hotels.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resolvers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_graphiql/2.3_MongoDB_Insert_Hotel.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613795300768</updated>
       <workItem from="1613795301947" duration="9266000" />
-      <workItem from="1613859862344" duration="6075000" />
+      <workItem from="1613859862344" duration="7808000" />
     </task>
     <task id="LOCAL-00001" summary="Create node modules">
       <created>1613795901924</created>
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613874021370</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update Resolvers">
+      <created>1613874923809</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613874923809</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,13 +159,14 @@
     <MESSAGE value="Create Book_Hotel Model" />
     <MESSAGE value="Create User Model" />
     <MESSAGE value="Update Schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Schema" />
+    <MESSAGE value="Update Resolvers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Resolvers" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="0" key="CommitChangelistDialog2" timestamp="1613874020531">
+    <state x="326" y="0" key="CommitChangelistDialog2" timestamp="1613874922970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="326" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613874020531" />
+    <state x="326" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613874922970" />
     <state x="147" y="52" key="DiffContextDialog" timestamp="1613856140382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -176,9 +183,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613856040861" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613874023578">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613874925785">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613874023578" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613874925785" />
   </component>
 </project>

@@ -37,6 +37,7 @@ exports.typeDefs = gql `
      getBookHotelByID(id: ID!): BookHotel
      getHotel: [Hotel]
      getHotelByID(id: ID!): Hotel
+     getHotelByName(hotel_name: String!): [Hotel]
      getHotelByCity(city: String!): [Hotel]
      getUser: [User]
      getUserByID(id: ID!): User
@@ -50,9 +51,13 @@ exports.typeDefs = gql `
         user_id: Int!): BookHotel
 
      updateBookHotel(id: String!,
-        booking_date: Date!
-        booking_start: Date!
-        booking_end: Date!
+        hotel_id: Int!
+        hotel_name: String!
+        street: String!
+        city: String!
+        postal_code: String!
+        price: Float!
+        email: String!
         user_id: Int!): BookHotel
 
      deleteBookHotel(id: ID!): BookHotel
